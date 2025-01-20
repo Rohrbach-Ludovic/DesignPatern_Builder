@@ -29,4 +29,18 @@ public class Voiture {
             return new Voiture(this);
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        result.append("Marque: ").append(this.marque);
+        result.append("\n");
+        result.append("Options: \n");
+        for (String option : this.options) {
+            result.append(option).append(", ");
+        }
+
+        return result.toString();
+    }
 }
