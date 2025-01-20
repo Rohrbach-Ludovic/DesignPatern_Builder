@@ -20,8 +20,20 @@ public class Voiture {
             this.marque = marque;
         }
 
-        public BuilderVoiture addOptions(String item){
-            this.options.add(item);
+        public BuilderVoiture addOptions(Enum item){
+            switch(item){
+                case EOptions.Volant:
+                    this.options.add("Volant");
+                    break;
+                case EOptions.Moteur:
+                    this.options.add("Moteur");
+                    break;
+                case EOptions.Boite_auto:
+                    this.options.add("Boite Auto");
+                    break;
+                default:
+                    break;
+            }
             return this;
         }
 
